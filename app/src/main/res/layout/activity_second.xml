@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".basic.SecondActivity"
+        >
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/secondActivity_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin.title.default"
+            android:text="@string/secondActivity.title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="@dimen/size.title.default"
+            app:layout_constraintBottom_toTopOf="@id/secondActivity_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            />
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/secondActivity_btn"
+            android:layout_width="@dimen/button.width.large"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/secondActivity.btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/secondActivity_tv_title"
+            app:layout_constraintVertical_chainStyle="packed"
+            />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

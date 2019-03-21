@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
+
+    <!-- Main Activity -->
+    <string name="main.title">Hola mundo!</string>
+    <string name="main.btn">Tócame que soy realidad</string>
+    <string name="main.btn2">Ir a la segunda pantalla</string>
+    <!-- -->
+
+    <!-- Second Activity -->
+    <string name="secondActivity.title">Esta es la segunda pantalla</string>
+    <string name="secondActivity.btn">Regresar</string>
+    <!-- -->
+
+</resources>

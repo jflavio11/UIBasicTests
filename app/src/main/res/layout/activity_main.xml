@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".basic.MainActivity">
+
+    <TextView
+            android:id="@+id/mainActivity_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin.title.default"
+            android:text="@string/main.title"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/size.title.default"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            />
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mainActivity_btn_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin.title.default"
+            android:text="@string/main.btn2"
+            app:layout_constraintBottom_toTopOf="@id/mainActivity_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainActivity_tv_title"
+            app:layout_constraintVertical_chainStyle="packed"
+            />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mainActivity_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin.title.default"
+            android:text="@string/main.btn"
+            app:layout_constraintBottom_toTopOf="@id/mainActivity_pb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainActivity_tv_title"
+            app:layout_constraintVertical_chainStyle="packed"
+            />
+
+    <ProgressBar
+            android:id="@+id/mainActivity_pb"
+            android:layout_width="@dimen/progressBar.width.default"
+            android:layout_height="@dimen/progressBar.height.default"
+            android:layout_margin="@dimen/margin.title.default"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainActivity_btn"
+            app:layout_constraintVertical_chainStyle="packed"
+            />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

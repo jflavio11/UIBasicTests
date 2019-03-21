@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
+    <string name="app_name" translatable="false">RobolectricTest</string>
+
+    <!-- Main Activity -->
+    <string name="main.title">Hello world!</string>
+    <string name="main.btn">Touch me now</string>
+    <string name="main.btn2">Go to second activity</string>
+    <!-- -->
+
+    <!-- Second Activity -->
+    <string name="secondActivity.title">This is the second activity</string>
+    <string name="secondActivity.btn">Go back!</string>
+    <!-- -->
+
+</resources>
