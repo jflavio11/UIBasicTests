@@ -31,7 +31,6 @@ class ViewPagerActivityTest {
     @Before
     fun setUp() {
         activityScenario = ActivityScenario.launch(ViewPagerActivity::class.java)
-        RuntimeEnvironment.getMasterScheduler().idleState = Scheduler.IdleState.PAUSED
     }
 
     @Test
@@ -47,8 +46,10 @@ class ViewPagerActivityTest {
         activityScenario.onActivity { activity ->
             val vp: ViewPager = activity.findViewById(R.id.viewPagerActivity_vp)
             val btn: Button = activity.findViewById(R.id.viewPagerActivity_btn)
+            RuntimeEnvironment.getMasterScheduler().idleState = Scheduler.IdleState.PAUSED
             vp.currentItem = 3
             ShadowLooper.runUiThreadTasks()
+            // RuntimeEnvironment.getMasterScheduler().idleState = Scheduler.IdleState.UNPAUSED
             Assert.assertEquals(View.VISIBLE, btn.visibility)
         }
     }
@@ -58,8 +59,10 @@ class ViewPagerActivityTest {
         activityScenario.onActivity { activity ->
             val vp: ViewPager = activity.findViewById(R.id.viewPagerActivity_vp)
             val btn: Button = activity.findViewById(R.id.viewPagerActivity_btn)
+            RuntimeEnvironment.getMasterScheduler().idleState = Scheduler.IdleState.PAUSED
             vp.currentItem = 1
             ShadowLooper.runUiThreadTasks()
+            // RuntimeEnvironment.getMasterScheduler().idleState = Scheduler.IdleState.UNPAUSED
             Assert.assertEquals(View.INVISIBLE, btn.visibility)
         }
     }
